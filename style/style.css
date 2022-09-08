@@ -1,0 +1,204 @@
+/* variable css */
+:root {
+    /* --background-color: #ffffff; */
+    --middle-blue-green: hsl(176, 35%, 63%);
+    --sonic-silver: hsl(0, 0%, 44%);
+    --eerie-black: hsl(0, 0%, 9%);
+    --ocean-green: hsl(148, 45%, 58%);
+    --candy-pink: hsl(356, 65%, 63%);
+    --cultured: hsl(0, 0%, 96%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+}
+
+/* Reset all web parameters */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+img,
+input,
+button,
+.icon {
+    display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 20px;
+}
+
+/* ---- navigation bar logo ---- */
+.alpha-inks {
+    color: #64c491;
+}
+
+.logo label {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+/* ---- navigation bar links ---- */
+.nav-links {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    width: 30%;
+    margin: 0 20px;
+}
+
+.nav-links li {
+    display: block;
+    margin: auto 10px;
+}
+
+.nav-links li a{
+    color: #000000;
+    font-weight: 500;
+    font-size: 18px;
+    transition: 500ms;
+}
+
+.nav-links li a:hover {
+    color: #64c491;
+}
+
+/* ---- navigation bar buttons ---- */
+.nav-actions {
+    display: flex;
+    justify-content: space-evenly;
+    width: 10%;
+    transition: 500ms;
+}
+
+.nav-actions button {
+    border: 0px solid transparent;
+    background-color: transparent;
+}
+
+.nav-btn {
+    position: relative;
+    width: 50px;
+    text-align: center;
+}
+
+.nav-actions button p {
+    color: #606060;
+    transition: 500ms;
+}
+
+.nav-actions button p:hover {
+    color: #000000;
+}
+
+.nav-btn .icon {
+    margin-inline: auto;
+    font-size: 22px;
+    margin-bottom: 3px;
+    color: #ffffff;
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
+}
+
+.nav-btn .btn-badge {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    background: var(--background, var(--eerie-black));
+    background: #000000;
+    width: 20px;
+    height: 20px;
+    display: grid;
+    place-items: center;
+    line-height: 0;
+    font-size: 13px;
+    color: var(--white);
+    border-radius: 50%;
+}
+
+/* navigation bar lines for collapsable nav bar */
+.nav-lines {
+    display: none;
+    margin: auto 0;
+}
+
+.line-full {
+    border: 1px solid #000000;
+    width: 20px;
+    height: 0px;
+    margin: 5px;
+}
+
+.line-half {
+    border: 1px solid #000000;
+    width: 10px;
+    height: 0px;
+    margin: 5px;
+}
+
+@media (max-width: 1000px) {
+    .nav-actions {
+        background-color: #ffffff;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 5px;
+        padding-block: 16px 10px;
+        box-shadow: 0 -2px 20px hsla(0, 0%, 0%, 0.1);
+        z-index: 1;
+    }
+
+    .nav-lines {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        position: absolute;
+        margin: 0 0;
+        display: flex;
+        flex-direction: column;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 0;
+        background-color: #64c491;
+        transform: 200ms;
+        overflow: hidden;
+        transition: 200ms;
+        /* opacity: 0%; */
+    }
+
+    .nav-links.active {
+        height: 30%;
+    }
+
+    .nav-links li {
+        display: flex;
+        justify-content: center;
+    }
+}
