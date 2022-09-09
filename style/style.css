@@ -1,12 +1,11 @@
 /* variable css */
 :root {
     /* --background-color: #ffffff; */
-    --middle-blue-green: hsl(176, 35%, 63%);
+    --black-blue: #1B262C;
+    --navy-blue: #0F4C75;
+    --blue: #3282B8;
+    --light-blue: #BBE1FA;
     --sonic-silver: hsl(0, 0%, 44%);
-    --eerie-black: hsl(0, 0%, 9%);
-    --ocean-green: hsl(148, 45%, 58%);
-    --candy-pink: hsl(356, 65%, 63%);
-    --cultured: hsl(0, 0%, 96%);
     --white: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 0%);
 }
@@ -44,12 +43,17 @@ html {
 header {
     display: flex;
     justify-content: space-between;
-    margin: 20px 20px;
+    padding: 20px 40px;
 }
 
 /* ---- navigation bar logo ---- */
+.logo label {
+    color: #ffffff;
+}
+
 .alpha-inks {
-    color: #64c491;
+    color: #00ffff;
+    /* color: var(--ocean-green); */
 }
 
 .logo label {
@@ -72,14 +76,17 @@ header {
 }
 
 .nav-links li a{
-    color: #000000;
+    color: var(--white);
     font-weight: 500;
     font-size: 18px;
     transition: 500ms;
 }
 
 .nav-links li a:hover {
-    color: #64c491;
+    background-color: var(--white);
+    color: var(--black);
+    padding: 5px 20px;
+    border-radius: 20px;
 }
 
 /* ---- navigation bar buttons ---- */
@@ -106,16 +113,16 @@ header {
     transition: 500ms;
 }
 
-.nav-actions button p:hover {
-    color: #000000;
+.nav-btn:hover > .nav-action-label {
+    color: var(--white);
 }
 
 .nav-btn .icon {
     margin-inline: auto;
     font-size: 22px;
     margin-bottom: 3px;
-    color: #ffffff;
-    -webkit-text-stroke: #000000;
+    color: var(--black);
+    -webkit-text-stroke: var(--white);
     -webkit-text-stroke-width: 1px;
 }
 
@@ -124,7 +131,7 @@ header {
     top: -5px;
     right: 0;
     background: var(--background, var(--eerie-black));
-    background: #000000;
+    background: var(--black);
     width: 20px;
     height: 20px;
     display: grid;
@@ -132,7 +139,14 @@ header {
     line-height: 0;
     font-size: 13px;
     color: var(--white);
+    border: 0.5px solid var(--white);
     border-radius: 50%;
+    transition: 200ms;
+}
+
+.nav-btn:hover > .btn-badge {
+    background-color: var(--white);
+    color: var(--black);
 }
 
 /* navigation bar lines for collapsable nav bar */
@@ -142,22 +156,88 @@ header {
 }
 
 .line-full {
-    border: 1px solid #000000;
+    border: 1px solid var(--black);
     width: 20px;
     height: 0px;
     margin: 5px;
 }
 
 .line-half {
-    border: 1px solid #000000;
+    border: 1px solid var(--black);
     width: 10px;
     height: 0px;
     margin: 5px;
 }
 
+#home {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--black);
+    background: url("../img/background-drinks.png");
+    background-size: cover;
+    background-position: right;
+}
+
+/* ---- Main Cover Page ---- */
+
+main {
+    margin: 10%;
+    color: var(--white);
+}
+
+main h2 {
+    font-size: 30px;
+}
+
+main h1 {
+    font-size: 96px;
+    color: var(--black);
+    -webkit-text-stroke-color: var(--white);
+    -webkit-text-stroke-width: 1px;
+}
+
+main p {
+    letter-spacing: 2px;
+}
+
+/* ---- About Us Section ---- */
+#about-us {
+    height: 80vh;
+    background-color: var(--navy-blue);
+}
+
+
+
+
+
+/* ---- Footer CSS ---- */
+footer {
+    padding: 20px;
+    height: 20vh;
+    background-color: var(--black-blue);
+}
+
+footer p {
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+}
+
 @media (max-width: 1000px) {
+    header {
+        background-color: var(--white);
+    }
+
+    .logo label {
+        color: var(--black);
+    }
+
+    .alpha-inks {
+        color: var(--navy-blue);
+    }
+
     .nav-actions {
-        background-color: #ffffff;
+        background-color: var(--white);
         position: fixed;
         bottom: 0;
         left: 0;
@@ -186,7 +266,7 @@ header {
         right: 0;
         width: 100vw;
         height: 0;
-        background-color: #64c491;
+        background-color: var(--black-blue);
         transform: 200ms;
         overflow: hidden;
         transition: 200ms;
@@ -201,4 +281,62 @@ header {
         display: flex;
         justify-content: center;
     }
+
+    .nav-btn .icon {
+        margin-inline: auto;
+        font-size: 22px;
+        margin-bottom: 3px;
+        color: #ffffff;
+        -webkit-text-stroke: var(--black);
+        -webkit-text-stroke-width: 1px;
+    }
+
+    main h2 {
+        font-size: 5vw;
+    }
+
+    main h1 {
+        display: block;
+        bottom: 30%;
+        font-size: 15vw;
+    }
+
+    main p {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 600px) {
+    #home {
+        height: 100vh;
+        width: 100%;
+        background-color: var(--black);
+        background: url("../img/background-drinks.png");
+        background-size: cover;
+        background-position:500px;
+    }
+    
+    main p {
+        font-size: 4vw;
+    }
+
+    footer p {
+        font-size: 4vw;
+    }
+
+    footer p i {
+        color: #ff0000;
+        margin: 5px;
+    }
+}
+
+/* Scroll Bar CSS */
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1B262C;
+    border-radius: 10px;
 }
