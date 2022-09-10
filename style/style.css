@@ -5,18 +5,27 @@
     --navy-blue: #0F4C75;
     --blue: #3282B8;
     --light-blue: #BBE1FA;
+    --golden: #bc9864;
+    --off-black: #060606;
+    --grey: #666666;
+    --dark-grey: #141414;
+    --off-white: #cecece;
     --sonic-silver: hsl(0, 0%, 44%);
     --white: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 0%);
 }
 
+@font-face {
+    font-family: Poppins;
+    src: url(/Poppins/Poppins-Regular.ttf);
+}
+
 /* Reset all web parameters */
-*,
-*::before,
-*::after {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Poppins;
 }
 
 li {
@@ -48,12 +57,7 @@ header {
 
 /* ---- navigation bar logo ---- */
 .logo label {
-    color: #ffffff;
-}
-
-.alpha-inks {
-    color: #00ffff;
-    /* color: var(--ocean-green); */
+    color: var(--golden);
 }
 
 .logo label {
@@ -109,7 +113,7 @@ header {
 }
 
 .nav-actions button p {
-    color: #606060;
+    color: var(--grey);
     transition: 500ms;
 }
 
@@ -124,13 +128,19 @@ header {
     color: var(--black);
     -webkit-text-stroke: var(--white);
     -webkit-text-stroke-width: 1px;
+    transition: 200ms;
+}
+
+.nav-btn:hover > .icon {
+    -webkit-text-stroke: var(--golden);
+    -webkit-text-stroke-width: 1px;
 }
 
 .nav-btn .btn-badge {
     position: absolute;
     top: -5px;
     right: 0;
-    background: var(--background, var(--eerie-black));
+    background: var(--background, var(--off-black));
     background: var(--black);
     width: 20px;
     height: 20px;
@@ -183,44 +193,181 @@ header {
 main {
     margin: 10%;
     color: var(--white);
+    text-shadow: 0px 0px 100px var(--blue);
 }
 
 main h2 {
     font-size: 30px;
+    text-shadow: 0px 0px 100px var(--blue);
 }
 
 main h1 {
     font-size: 96px;
     color: var(--black);
     -webkit-text-stroke-color: var(--white);
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 0.5px;
+    text-shadow: 0px 0px 100px var(--blue);
 }
 
 main p {
     letter-spacing: 2px;
+    text-shadow: 0px 0px 100px var(--blue);
+}
+
+.explore-menu {
+    margin: 40px 0;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid var(--light-blue);
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px var(--light-blue);
+    transition: 500ms ease;
+}
+
+.explore-menu:hover {
+    box-shadow: 0px 0px 100px var(--blue);
+}
+
+.explore-menu a {
+    color: var(--white);
 }
 
 /* ---- About Us Section ---- */
 #about-us {
-    height: 80vh;
-    background-color: var(--navy-blue);
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
+.about-us h1 {
+    font-size: 72px;
+    color: var(--golden);
+    margin: 40px 0;
+}
 
+.about-us p {
+    font-size: 24px;
+    width: 80%;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
 
+.about-us-img img {
+    width: 30vw;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 20px;
+    box-shadow: 5px 5px 100px var(--off-black);
+}
 
+/* ---- Contact Section ---- */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    background-color: var(--off-black);
+    color: var(--white);
+    padding: 5%;
+}
+
+.contact-form {
+    width: 40vw;
+    margin: auto;
+}
+
+.contact-form h1 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin: 20px 0px 40px 0px;
+}
+
+.contact-form input, .contact-form textarea, .contact-form button {
+    background-color: var(--dark-grey);
+    color: var(--white);
+    letter-spacing: 1px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width: 95%;
+    height: 40px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.contact-form textarea {
+    resize: none;
+    margin: 0 20px;
+    height: auto;
+}
+
+.contact-form button {
+    background-color: var(--golden);
+    border: 1px solid var(--golden);
+    padding: 0px;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.contact-form button:hover {
+    background-color: var(--off-black);
+    color: var(--golden);
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-info-box {
+    margin: 40px;
+    font-weight: 300;
+}
+
+#address {
+    color: var(--grey);
+}
+
+.contact-info-box i {
+    display: block;
+    margin: 10px auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 18px;
+    background-color: var(--golden);
+}
+
+.contact-info-box p {
+    width: 60%;
+    display: block;
+    margin: 10px auto;
+}
+
+.contact-info-box p a {
+    color: var(--white);
+}
 
 /* ---- Footer CSS ---- */
 footer {
     padding: 20px;
     height: 20vh;
-    background-color: var(--black-blue);
+    background-color: var(--off-black);
 }
 
 footer p {
     color: var(--white);
     display: flex;
     justify-content: center;
+}
+
+#heart {
+    color: #ff0000;
+    margin: 0 5px;
 }
 
 @media (max-width: 1000px) {
@@ -230,10 +377,7 @@ footer p {
 
     .logo label {
         color: var(--black);
-    }
-
-    .alpha-inks {
-        color: var(--navy-blue);
+        font-weight: 700;
     }
 
     .nav-actions {
@@ -266,7 +410,7 @@ footer p {
         right: 0;
         width: 100vw;
         height: 0;
-        background-color: var(--black-blue);
+        background-color: #000000e2;
         transform: 200ms;
         overflow: hidden;
         transition: 200ms;
@@ -274,7 +418,7 @@ footer p {
     }
 
     .nav-links.active {
-        height: 30%;
+        height: 40%;
     }
 
     .nav-links li {
@@ -304,6 +448,36 @@ footer p {
     main p {
         font-size: 2vw;
     }
+
+    #about-us {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+
+    .about-us h1 {
+        text-align: center;
+    }
+
+    .about-us p { 
+        display: block;
+        margin: auto auto;
+        width: 100%;
+    }
+
+    .about-us-img img {
+        width: 70vw;
+    }
+
+    .contact-form {
+        width: 80%;
+    }
+
+    .contact-section {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 600px) {
@@ -320,6 +494,32 @@ footer p {
         font-size: 4vw;
     }
 
+    .about-us h1 {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .about-us p { 
+        font-size: 20px;
+        width: 100%;
+        display: block;
+        margin: auto auto;
+    }
+
+    .about-us-img img {
+        width: 90vw;
+    }
+
+    .contact-form {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .contact-form h1 {
+        font-size: 20px;
+    }
+
     footer p {
         font-size: 4vw;
     }
@@ -332,11 +532,11 @@ footer p {
 
 /* Scroll Bar CSS */
 ::-webkit-scrollbar {
-    width: 8px;
-    background-color: var(--black);
+    width: 4px;
+    background-color: var(--off-black);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #1B262C;
+    background-color: var(--grey);
     border-radius: 10px;
 }
