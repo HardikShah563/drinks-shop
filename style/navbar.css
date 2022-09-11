@@ -258,3 +258,9 @@ header {
         color: var(--golden);
     }
 }
+
+@media (max-width: 600px) {
+    .logo label {
+        font-size: 20px;
+    }
+}
