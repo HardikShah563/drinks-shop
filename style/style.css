@@ -15,6 +15,7 @@
     --black: hsl(0, 0%, 0%);
 }
 
+/* Font face import */
 @font-face {
     font-family: Poppins;
     src: url(/Poppins/Poppins-Regular.ttf);
@@ -112,12 +113,12 @@ header {
     text-align: center;
 }
 
-.nav-actions button p {
+.nav-actions button p a {
     color: var(--grey);
     transition: 500ms;
 }
 
-.nav-btn:hover > .nav-action-label {
+.nav-btn:hover > .nav-action-label a {
     color: var(--white);
 }
 
@@ -166,16 +167,16 @@ header {
 }
 
 .line-full {
-    border: 1px solid var(--black);
+    background-color: var(--black);
     width: 20px;
-    height: 0px;
+    height: 2px;
     margin: 5px;
 }
 
 .line-half {
-    border: 1px solid var(--black);
+    background-color: var(--black);
     width: 10px;
-    height: 0px;
+    height: 2px;
     margin: 5px;
 }
 
@@ -217,7 +218,7 @@ main p {
 .explore-menu {
     margin: 40px 0;
     padding: 10px 20px;
-    background-color: transparent;
+    background-color: var(--off-black);
     border: 1px solid var(--light-blue);
     border-radius: 8px;
     box-shadow: 0px 0px 15px var(--light-blue);
@@ -433,6 +434,15 @@ footer p {
         color: #ffffff;
         -webkit-text-stroke: var(--black);
         -webkit-text-stroke-width: 1px;
+    }
+
+    .nav-btn:hover > .nav-action-label {
+        color: var(--black);
+    }
+
+    .nav-btn:hover > .btn-badge {
+        background-color: var(--black);
+        color: var(--golden);
     }
 
     main h2 {
