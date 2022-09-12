@@ -235,7 +235,7 @@ main p {
 
 /* ---- About Us Section ---- */
 #about-us {
-    background-color: var(--white);
+    background-color: var(--off-white);
     display: flex;
     justify-content: center;
     padding: 5%;
@@ -250,7 +250,7 @@ main p {
 }
 
 .about-us p {
-    font-size: 24px;
+    font-size: 2vw;
     width: 80%;
     text-align: justify;
     letter-spacing: 1px;
@@ -264,6 +264,31 @@ main p {
     margin: 15px auto;
     border-radius: 20px;
     box-shadow: 5px 5px 100px var(--off-black);
+}
+
+/* ---- Shop Section */ 
+
+.shop {
+    background: url('../img/shop-background.png');
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop a {
+    padding: 10px 20px;
+    border: 2px solid var(--off-black);
+    border-radius: 50px;
+    font-weight: 600;
+    color: var(--off-white);
+    background-color: var(--off-black);
+    transition: 400ms;
+}
+
+.shop a:hover {
+    background-color: transparent;
+    color: var(--off-black);
 }
 
 /* ---- Contact Section ---- */
@@ -356,6 +381,7 @@ main p {
 /* ---- Footer CSS ---- */
 footer {
     padding: 20px;
+    padding-bottom: 10vw;
     height: 20vh;
     background-color: var(--off-black);
 }
@@ -364,6 +390,7 @@ footer p {
     color: var(--white);
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 #heart {
@@ -473,6 +500,7 @@ footer p {
         display: block;
         margin: auto auto;
         width: 100%;
+        font-size: 2vw;
     }
 
     .about-us-img img {
@@ -511,11 +539,12 @@ footer p {
     .about-us h1 {
         text-align: center;
         margin: 10px 0;
+        font-size: 20vw;
     }
 
     .about-us p { 
-        font-size: 20px;
-        width: 100%;
+        font-size: 16px;
+        width: 95%;
         display: block;
         margin: auto auto;
     }
@@ -527,7 +556,12 @@ footer p {
     .contact-form {
         margin: 0;
         padding: 0;
-        width: 100%;
+        width: 90%;
+    }
+
+    .contact-form input, .contact-form textarea, .contact-form button {
+        margin: 10px 0;
+        padding: 10px;
     }
 
     .contact-form h1 {

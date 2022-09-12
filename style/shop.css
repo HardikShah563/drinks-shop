@@ -13,64 +13,7 @@
     --sonic-silver: hsl(0, 0%, 44%);
     --white: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 0%);
-}
-
-/* Font face import */
-@font-face {
-    font-family: Poppins;
-    src: url(/Poppins/Poppins-Regular.ttf);
-}
-
-/* Reset all web parameters */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Poppins;
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-a,
-img,
-input,
-button,
-.icon {
-    display: block;
-}
-
-html {
-    scroll-behavior: smooth;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 40px;
-}
-
-/* variable css */
-:root {
-    /* --background-color: #ffffff; */
-    --black-blue: #1B262C;
-    --navy-blue: #0F4C75;
-    --blue: #3282B8;
-    --light-blue: #BBE1FA;
-    --golden: #bc9864;
-    --off-black: #060606;
-    --grey: #666666;
-    --dark-grey: #141414;
-    --off-white: #cecece;
-    --sonic-silver: hsl(0, 0%, 44%);
-    --white: hsl(0, 0%, 100%);
-    --black: hsl(0, 0%, 0%);
+    --light-black: #303030;
 }
 
 /* Font face import */
@@ -320,6 +263,7 @@ header {
 .menu-card {
     padding: 10px 15px;
     margin: 20px;
+    background-color: var(--off-black);
     border: 1px solid var(--black);
     border-radius: 12px;
     box-shadow: 5px 5px 20px var(--dark-grey);
@@ -328,6 +272,7 @@ header {
 
 .menu-card:hover {
     transform: scale(1.1);
+    box-shadow: 5px 5px 40px var(--dark-grey);
 }
 
 .menu-card img {
@@ -335,12 +280,13 @@ header {
     margin: 10px auto;
     width: 200px;
     height: auto;
-    /* border: 1px solid var(--black); */
+    border: 1px solid var(--white);
     border-radius: 8px;
 }
 
 .drink-details {
     display: flex;
+    color: var(--off-white);
 }
 
 .drink-name, .drink-cost {
@@ -351,8 +297,8 @@ header {
     width: 90%;
     height: 45px;
     margin: auto auto;
-    background-color: var(--black);
-    color: var(--off-white);
+    background-color: var(--white);
+    color: var(--black);
     border: 2px solid var(--black);
     border-radius: 8px;
     cursor: pointer;
@@ -369,6 +315,38 @@ header {
     padding: 0 10px;
 }
 
+.popup {
+    display: flex;
+    position:fixed;
+    justify-content: center;
+    width: 20vw;
+    margin: 20px;
+    padding: 10px;
+    font-size: 1vw;
+    background-color: var(--off-black);
+    color: var(--off-white);
+    border: 2px solid var(--off-white);
+    border-radius: 8px;
+    z-index: 1;
+    bottom: 40px;
+    left: 40%;
+    margin: auto auto;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.popup i {
+    margin: 0 10px 0 0;
+    font-size: 24px;
+    margin-top: 5px;
+    color: #2cbb5d;
+}
+
+
+
 /* ---- Footer CSS ---- */
 footer {
     padding: 5%;
@@ -381,6 +359,7 @@ footer p {
     color: var(--white);
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 #heart {
@@ -519,4 +498,15 @@ footer p {
     .drinks-title .line {
         width: 20vw;
     }
+}
+
+/* Scroll Bar CSS */
+::-webkit-scrollbar {
+    width: 4px;
+    background-color: var(--off-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--grey);
+    border-radius: 10px;
 }
