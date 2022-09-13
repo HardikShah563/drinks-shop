@@ -250,11 +250,11 @@ main p {
 }
 
 .about-us p {
-    font-size: 2vw;
+    font-size: 1.5vw;
     width: 80%;
     text-align: justify;
     letter-spacing: 1px;
-    line-height: 30px;
+    line-height: 35px;
 }
 
 .about-us-img img {
@@ -294,7 +294,7 @@ main p {
 /* ---- Contact Section ---- */
 .contact-section {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     background-color: var(--off-black);
     color: var(--white);
     padding: 5%;
@@ -302,7 +302,6 @@ main p {
 
 .contact-form {
     width: 40vw;
-    margin: auto;
 }
 
 .contact-form h1 {
@@ -346,36 +345,28 @@ main p {
 
 .contact-info {
     text-align: center;
+    /* margin: 0 20vw; */
+}
+
+.contact-info-box {
+    font-weight: 300;
+    margin: 40px;
 }
 
 .contact-info-box {
     margin: 40px;
-    font-weight: 300;
-}
-
-#address {
-    color: var(--grey);
 }
 
 .contact-info-box i {
-    display: block;
-    margin: 10px auto;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
     padding: 20px;
+    margin: 20px;
     font-size: 18px;
+    border-radius: 50%;
     background-color: var(--golden);
 }
 
-.contact-info-box p {
-    width: 60%;
-    display: block;
-    margin: 10px auto;
-}
-
-.contact-info-box p a {
-    color: var(--white);
+.contact-info-box a , .contact-info-box p{
+    color: var(--grey);
 }
 
 /* ---- Footer CSS ---- */
@@ -501,6 +492,7 @@ footer p {
         margin: auto auto;
         width: 100%;
         font-size: 2vw;
+        line-height: 30px;
     }
 
     .about-us-img img {
