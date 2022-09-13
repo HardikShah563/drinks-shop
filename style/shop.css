@@ -331,6 +331,7 @@ header {
     bottom: 40px;
     left: 40%;
     margin: auto auto;
+    margin-top: 50%;
     margin-top: 10px;
 }
 
@@ -340,8 +341,8 @@ header {
 
 .popup i {
     margin: 0 10px 0 0;
-    font-size: 24px;
-    margin-top: 5px;
+    font-size: 2vw;
+    margin-top: 0px;
     color: #2cbb5d;
 }
 
@@ -472,6 +473,16 @@ footer p {
     .drinks-title .title {
         font-size: 2.5vw;
     }
+
+    .popup {
+        width: 30vw;
+        left: 35vw;
+        font-size: 1.5vw;
+    }
+
+    .popup i {
+        margin-top: 0px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -497,6 +508,19 @@ footer p {
     
     .drinks-title .line {
         width: 20vw;
+    }
+
+    .popup {
+        width: 60vw;
+        height: 50px;
+        left: 20vw;
+        bottom: 200px;
+        font-size: 3vw;
+    }
+
+    .popup i {
+        margin-top: 0px;
+        font-size: 20px;
     }
 }
 
